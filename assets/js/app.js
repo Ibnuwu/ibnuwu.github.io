@@ -624,7 +624,7 @@ function setupLightbox() {
   });
 }
 
-// --- Premium Ambient Background Glow ---
+// --- Subtle Ambient Background Glow ---
 function setupCursorGlow() {
   const glow = document.createElement('div');
   glow.className = 'cursor-glow';
@@ -632,9 +632,25 @@ function setupCursorGlow() {
 
   document.addEventListener('mousemove', (e) => {
     window.requestAnimationFrame(() => {
-      glow.style.transform = `translate3d(${e.clientX - 150}px, ${e.clientY - 150}px, 0)`;
+      glow.style.transform = `translate3d(${e.clientX - 200}px, ${e.clientY - 200}px, 0)`;
     });
   });
+}
+
+// --- Scroll Reveal for Sections ---
+function setupScrollReveal() {
+  const sections = document.querySelectorAll('#content-nav, #tab-content, .footer-container');
+  sections.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  sections.forEach(el => observer.observe(el));
 }
 
 // --- Core Initializer ---
@@ -784,6 +800,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup cursor glow background light
   setupCursorGlow();
+
+  // Setup scroll reveal animations
+  setupScrollReveal();
 
   // Load Profile from CMS settings
   loadProfileSettings();

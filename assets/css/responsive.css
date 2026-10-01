@@ -1,7 +1,10 @@
 /* ==========================================================
    responsive.css — Media Queries (Mobile First)
-   Optimized for Instagram in-app browser (≤480px)
+   Redesigned: Minimal Dark Creative
    ========================================================== */
+
+/* ===== BASE (Mobile: 0–359px) ===== */
+/* Already handled by default styles — mobile first */
 
 /* --- Extra Small Devices (under 360px) --- */
 @media (max-width: 359px) {
@@ -9,53 +12,104 @@
     --container-padding: var(--space-4);
   }
 
-  .hero-socials {
+  .hero-meta h1 {
+    font-size: var(--fs-xl);
+  }
+
+  .icon-dock {
     gap: var(--space-2);
   }
 
-  .social-link {
-    width: 44px;
-    height: 44px;
-    font-size: 1rem;
+  .dock-icon-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .tab-btn {
-    font-size: var(--fs-xs);
-    padding: var(--space-3) var(--space-1);
+    font-size: 0.65rem;
+    padding: var(--space-3) 0;
+    letter-spacing: 0.08em;
+  }
+
+  .skull-container {
+    width: 96px;
+    height: 96px;
+  }
+
+  .skull-canvas {
+    width: 96px;
+    height: 96px;
   }
 }
 
-/* --- Small Devices (360px to 480px — IG in-app browser sweet spot) --- */
-@media (min-width: 360px) and (max-width: 480px) {
+/* --- Small Devices (360px–479px — IG in-app browser sweet spot) --- */
+@media (min-width: 360px) and (max-width: 479px) {
   :root {
     --container-padding: var(--space-5);
   }
 
-  .hero-socials {
-    gap: var(--space-3);
-  }
-  
-  .social-link {
-    width: 48px;
-    height: 48px;
-  }
-  
   .tab-btn {
     min-height: 48px;
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-4) 0;
+  }
+
+  .skull-container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .skull-canvas {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* --- Medium Phones (480px–639px) --- */
+@media (min-width: 480px) {
+  .hero-meta h1 {
+    font-size: var(--fs-2xl);
+  }
+
+  .skull-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skull-canvas {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* --- Tablets (640px–767px) --- */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: var(--space-8);
+  }
+
+  .hero-quote {
+    max-width: 420px;
+  }
+
+  .skull-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skull-canvas {
+    width: 140px;
+    height: 140px;
   }
 }
 
 /* --- Medium Devices & Tablets (768px and up) --- */
 @media (min-width: 768px) {
-  /* Design Tokens Scale Adjustments */
-  :root {
-    --container-padding: var(--space-8);
-  }
-
   /* Hero Section scaling */
   #hero {
-    padding-block: var(--space-16) var(--space-10);
+    padding-block: var(--space-16) var(--space-12);
+    min-height: 65vh;
   }
 
   .hero-avatar-wrapper {
@@ -69,11 +123,11 @@
   }
 
   .hero-nickname {
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm);
   }
 
   .hero-quote {
-    max-width: 480px;
+    max-width: 440px;
   }
 
   .hero-quote p {
@@ -83,7 +137,7 @@
   /* Projects Layout */
   .featured-card {
     flex-direction: row !important;
-    min-height: 280px;
+    min-height: 260px;
   }
 
   .featured-card .project-thumbnail-wrapper {
@@ -104,7 +158,7 @@
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 
   /* Creative Section */
@@ -112,26 +166,42 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
+
+  /* Skull */
+  .skull-container {
+    width: 160px;
+    height: 160px;
+  }
+
+  .skull-canvas {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 /* --- Large Devices & Desktops (1024px and up) --- */
 @media (min-width: 1024px) {
   :root {
-    --container-max: 768px; /* Maintain standard narrow minimal content focus */
+    --container-max: 720px;
   }
   
   #hero {
-    padding-block: 5rem 3rem;
+    padding-block: var(--space-20) var(--space-12);
+    min-height: 70vh;
+  }
+
+  .hero-meta h1 {
+    font-size: var(--fs-4xl);
   }
 }
 
 /* --- Ultra Large Desktop / Full HD (1440px and up) --- */
 @media (min-width: 1440px) {
   :root {
-    --container-max: 820px; /* Marginally wider for large displays while keeping it minimal */
+    --container-max: 780px;
   }
 
   #hero {
-    padding-block: 6rem 4rem;
+    padding-block: var(--space-24) var(--space-16);
   }
 }

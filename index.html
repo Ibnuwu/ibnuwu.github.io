@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://ibnuwu.github.io/airsenuwu/assets/images/og-image.png">
 
   <!-- Favicon (Inline Minimal SVG) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0a0a%22/><text y=%2265%22 x=%2225%22 font-family=%22sans-serif%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22%23f5f5f5%22>a</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23050505%22/><text y=%2265%22 x=%2225%22 font-family=%22sans-serif%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22%239b6dff%22>a</text></svg>">
 
   <!-- Google Fonts — Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,16 +41,6 @@
 </head>
 <body>
 
-  <!-- Man City Tribute Top Header -->
-  <div class="top-header" id="top-header">
-    <span class="top-header-year">1894</span>
-    <div class="top-header-moon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6CABDD" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-      </svg>
-    </div>
-  </div>
-
   <!-- App Container -->
   <div class="container flex flex-col min-h-screen">
     
@@ -64,18 +54,9 @@
       <!-- Section: Hero -->
       <section id="hero" class="w-full fade-in delay-1">
         
-        <!-- Avatar Wrapper with SVG Skull Trigger -->
-        <div class="hero-avatar-wrapper fade-in delay-1">
-          <img id="profile-avatar" src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile Picture" class="hero-avatar" width="104" height="104" decoding="async">
-          <button id="about-trigger" class="info-trigger-btn" aria-label="About airseen1" title="About airseen1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2a8 8 0 0 0-8 8c0 2.5 1.2 4.7 3 6.1V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2.9c1.8-1.4 3-3.6 3-6.1a8 8 0 0 0-8-8z"/>
-              <circle cx="9" cy="10" r="1.5"/>
-              <circle cx="15" cy="10" r="1.5"/>
-              <path d="M10 17v2"/>
-              <path d="M14 17v2"/>
-            </svg>
-          </button>
+        <!-- Interactive Pixel Skull Mascot -->
+        <div class="skull-container fade-in delay-1" id="skull-container">
+          <canvas id="skull-canvas" class="skull-canvas" width="120" height="120"></canvas>
         </div>
 
         <!-- Heading Group -->
@@ -104,6 +85,20 @@
             <i data-lucide="mail" class="icon-sm" aria-hidden="true"></i>
             <span>Contact</span>
           </a>
+        </div>
+
+        <!-- Avatar + About Trigger (small, subtle) -->
+        <div class="hero-avatar-wrapper fade-in delay-3">
+          <img id="profile-avatar" src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile Picture" class="hero-avatar" width="104" height="104" decoding="async">
+          <button id="about-trigger" class="info-trigger-btn" aria-label="About airseen1" title="About airseen1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a8 8 0 0 0-8 8c0 2.5 1.2 4.7 3 6.1V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2.9c1.8-1.4 3-3.6 3-6.1a8 8 0 0 0-8-8z"/>
+              <circle cx="9" cy="10" r="1.5"/>
+              <circle cx="15" cy="10" r="1.5"/>
+              <path d="M10 17v2"/>
+              <path d="M14 17v2"/>
+            </svg>
+          </button>
         </div>
 
         <!-- Sleek Minimalist Icon Dock (Min 48px touch target size) -->
@@ -301,6 +296,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="assets/js/utils.js" defer></script>
   <script src="assets/js/tabs.js" defer></script>
+  <script src="assets/js/skull.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>
