@@ -25,13 +25,10 @@
   <!-- Favicon (Inline Minimal SVG) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23050505%22/><text y=%2265%22 x=%2225%22 font-family=%22sans-serif%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22%239b6dff%22>a</text></svg>">
 
-  <!-- Google Fonts — Inter -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6 (for brand icons: Instagram, GitHub) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -43,92 +40,58 @@
 
   <!-- App Container -->
   <div class="container flex flex-col min-h-screen">
-    
-    <!-- Header / Navigation Shell -->
-    <header class="w-full mt-8 mb-6 fade-in delay-1" id="main-header">
-      <!-- Nav will be finalized in tabs & components -->
+    <header class="top-header" id="main-header">
+      <div class="brand-stamp">1894</div>
+      <div class="brand-center">PORTFOLIO / 26</div>
+      <div class="sky-moon" aria-label="Night mode">
+        <svg viewBox="0 0 56 56" role="img" aria-hidden="true">
+          <path d="M38.5 9.5A17 17 0 0 0 18 28.5a17.8 17.8 0 0 0 17.8 17.8 17 17 0 1 0 2.7-36.8Z" fill="currentColor"/>
+          <circle cx="20.2" cy="18.1" r="10.6" fill="#0b0d10" opacity="0.92"/>
+        </svg>
+      </div>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow w-full">
-      <!-- Section: Hero -->
-      <section id="hero" class="w-full fade-in delay-1">
-        
-        <!-- Interactive Pixel Skull Mascot -->
-        <div class="skull-container fade-in delay-1" id="skull-container">
-          <canvas id="skull-canvas" class="skull-canvas" width="120" height="120"></canvas>
-        </div>
-
-        <!-- Heading Group -->
-        <div class="hero-meta mb-3 fade-in delay-2">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <h1 id="profile-name">Ibnu Hamdun</h1>
+      <section id="hero" class="hero-panel fade-in delay-1">
+        <div class="profile-wrap">
+          <div class="profile-frame">
+            <img id="profile-avatar" src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile Picture" width="520" height="520" decoding="async">
+            <button id="about-trigger" class="profile-skull" aria-label="Open bio modal" title="Open bio" type="button">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <path d="M90 18c-14 0-27 5-37 15-10 10-16 23-16 38v5c0 8 3 15 7 22l-13 20c-3 5 1 11 7 11h16l7 27c2 8 9 13 17 13h24c8 0 15-5 17-13l7-27h16c6 0 10-6 7-11l-13-20c4-7 7-14 7-22v-5c0-15-6-28-16-38-10-10-23-15-37-15Zm-25 58c0-7 6-13 13-13s13 6 13 13-6 13-13 13-13-6-13-13Zm52 0c0-7 6-13 13-13s13 6 13 13-6 13-13 13-13-6-13-13Zm-27 27c-9 0-16 7-16 16h30c0-9-7-16-14-16Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M74 74c6 9 12 13 16 13 4 0 10-4 16-13" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="70" cy="89" r="5" fill="currentColor"/>
+                <circle cx="110" cy="89" r="5" fill="currentColor"/>
+                <path d="M76 122h28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </button>
           </div>
-          <span id="profile-nickname" class="hero-nickname">airseen1 &bull; ibnuwu</span>
         </div>
 
-        <!-- Kendrick Lamar Lyric Bio -->
-        <blockquote class="hero-quote fade-in delay-2 my-5">
-          <p id="profile-quote" class="text-sm text-secondary italic fw-medium" style="max-width: 440px; margin-inline: auto; line-height: 1.6;">
-            "I got, I got, I got, I got / Loyalty, got royalty inside my DNA."
-          </p>
-          <cite id="profile-quote-source" class="text-xs text-tertiary block mt-1">— Kendrick Lamar, DNA.</cite>
-        </blockquote>
+        <div class="hero-copy">
+          <p class="eyebrow" id="profile-nickname">AIRSEEN1 / PORTFOLIO</p>
+          <h1 id="profile-name">Ibnu Hamdun</h1>
+          <p class="hero-handle">@ibnuwu / airseen1</p>
 
-        <!-- Primary Call To Actions -->
-        <div class="hero-actions flex justify-center gap-3 mb-6 fade-in delay-3">
-          <a href="#content-nav" id="cta-projects" class="btn btn-primary btn-hero">
-            <i data-lucide="layout-grid" class="icon-sm" aria-hidden="true"></i>
-            <span>View Projects</span>
-          </a>
-          <a href="mailto:zxhamdun2@gmail.com" class="btn btn-outline btn-hero">
-            <i data-lucide="mail" class="icon-sm" aria-hidden="true"></i>
-            <span>Contact</span>
-          </a>
+          <blockquote class="hero-quote">
+            <p id="profile-quote">"I got, I got, I got, I got / Loyalty, got royalty inside my DNA."</p>
+            <cite id="profile-quote-source">— Kendrick Lamar, DNA.</cite>
+          </blockquote>
+
+          <div class="tool-list" aria-label="Tools and software used">
+            <span>Code Editor</span>
+            <span class="sep">/</span>
+            <span>Clip Studio Paint</span>
+            <span class="sep">/</span>
+            <span>Google Workspace</span>
+            <span class="sep">/</span>
+            <span>MS Office</span>
+            <span class="sep">/</span>
+            <span>Traditional Sketchbook</span>
+          </div>
         </div>
-
-        <!-- Avatar + About Trigger (small, subtle) -->
-        <div class="hero-avatar-wrapper fade-in delay-3">
-          <img id="profile-avatar" src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile Picture" class="hero-avatar" width="104" height="104" decoding="async">
-          <button id="about-trigger" class="info-trigger-btn" aria-label="About airseen1" title="About airseen1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2a8 8 0 0 0-8 8c0 2.5 1.2 4.7 3 6.1V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2.9c1.8-1.4 3-3.6 3-6.1a8 8 0 0 0-8-8z"/>
-              <circle cx="9" cy="10" r="1.5"/>
-              <circle cx="15" cy="10" r="1.5"/>
-              <path d="M10 17v2"/>
-              <path d="M14 17v2"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Sleek Minimalist Icon Dock (Min 48px touch target size) -->
-        <div class="icon-dock flex flex-wrap justify-center items-center gap-4 my-6 fade-in delay-3" aria-label="Social &amp; Professional Profiles">
-          <a href="https://github.com/Ibnuwu" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="GitHub Profile" title="GitHub (@Ibnuwu)">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://linkedin.com/in/ibnu-hamdun" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn (Ibnu Hamdun)">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="mailto:zxhamdun2@gmail.com" class="dock-icon-btn" aria-label="Email airseen1" title="Email (zxhamdun2@gmail.com)">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/airseen1" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="Instagram Profile" title="Instagram (@airseen1)">
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://open.spotify.com/user/31ddwjupym4fqk5mhjflhzueko7q" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="Spotify Profile" title="Spotify (airseen1)">
-            <i class="fa-brands fa-spotify" aria-hidden="true"></i>
-          </a>
-          <a href="https://letterboxd.com/Ibnduch/" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="Letterboxd Profile" title="Letterboxd (Ibnduch)">
-            <i data-lucide="film" class="icon-md" aria-hidden="true"></i>
-          </a>
-          <a href="https://myanimelist.net/profile/Hamduncle" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="MyAnimeList Profile" title="MyAnimeList (Hamduncle)">
-            <i data-lucide="tv" class="icon-md" aria-hidden="true"></i>
-          </a>
-        </div>
-
       </section>
 
-      <!-- Section: Navigation Tab Bar -->
       <section id="content-nav" class="w-full mt-8">
         <div class="tabs-container fade-in delay-4" role="tablist" aria-label="Portfolio Sections">
           <div class="tabs-wrapper flex justify-center">
@@ -145,28 +108,22 @@
         </div>
       </section>
 
-      <!-- Section: Dynamic Content Area -->
       <section id="tab-content" class="w-full mt-8" aria-live="polite">
-        
-        <!-- Tab Panel: Projects -->
         <div id="panel-projects" class="tab-panel active fade-in" role="tabpanel" aria-labelledby="tab-projects">
-          
           <div class="projects-section flex flex-col gap-8" id="projects-container">
-            
-            <!-- Single Featured Project: airsenuwu -->
             <div class="project-card featured-card card flex flex-col" data-slug="airsenuwu">
               <div class="project-thumbnail-wrapper">
-                <img src="assets/images/projects/project-featured.svg" alt="airsenuwu Portfolio Thumbnail" class="project-thumbnail" width="400" height="220" loading="lazy" decoding="async">
+                <img src="assets/images/projects/project-featured.svg" alt="airsenuwu Portfolio Thumbnail" class="project-thumbnail" width="800" height="480" loading="lazy" decoding="async">
                 <span class="project-status badge-completed">Featured</span>
               </div>
               <div class="project-content flex flex-col justify-between">
                 <div>
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="project-category text-xs fw-semibold text-tertiary">Portfolio Web &amp; Workspace</span>
-                    <span class="pill">Completed</span>
+                  <div class="project-kicker-row flex items-center justify-between mb-2">
+                    <span class="project-category">Portfolio Web &amp; Workspace</span>
+                    <span class="project-badge">Completed</span>
                   </div>
-                  <h3 class="project-title text-xl fw-bold text-primary mb-2">airsenuwu</h3>
-                  <p class="project-description text-sm text-secondary mb-4">
+                  <h3 class="project-title">airsenuwu</h3>
+                  <p class="project-description">
                     Built with a mobile-first approach using pure HTML, CSS, and JavaScript. Integrated with Decap CMS for seamless content management.
                   </p>
                   <div class="project-tech-stack flex flex-wrap gap-2 mb-6">
@@ -177,83 +134,68 @@
                   </div>
                 </div>
                 <div class="project-links flex gap-3 flex-wrap">
-                  <a href="https://github.com/Ibnuwu/airsenuwu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm-action" aria-label="GitHub Repository for airsenuwu">
-                    <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
-                    <span>Repository</span>
-                  </a>
-                  <a href="https://airsenuwu.is-a.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm-action" aria-label="Live Demo for airsenuwu">
-                    <i data-lucide="external-link" class="icon-sm" aria-hidden="true"></i>
+                  <a href="https://github.com/Ibnuwu/airsenuwu" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm-action" aria-label="Live Demo for airsenuwu">
                     <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/Ibnuwu/airsenuwu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm-action" aria-label="GitHub Repository for airsenuwu">
+                    <span>Repository</span>
                   </a>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
 
-        <!-- Tab Panel: Blog -->
         <div id="panel-blog" class="tab-panel hidden fade-in" role="tabpanel" aria-labelledby="tab-blog" aria-hidden="true">
-          
           <div class="blog-section flex flex-col gap-6" id="blog-container">
-            <!-- Empty State Fallback -->
             <div class="empty-state card text-center p-8 flex flex-col items-center justify-center">
-              <i data-lucide="pen-tool" class="icon-lg text-tertiary mb-3" style="width:32px;height:32px;"></i>
               <h4 class="text-md fw-semibold text-primary mb-1">No Articles Published Yet</h4>
               <p class="text-xs text-secondary">Articles, technical notes, and reviews will appear here once published via Decap CMS.</p>
             </div>
           </div>
-
         </div>
 
-        <!-- Tab Panel: Creative -->
         <div id="panel-creative" class="tab-panel hidden fade-in" role="tabpanel" aria-labelledby="tab-creative" aria-hidden="true">
-          
           <div class="creative-section flex flex-col gap-6">
             <div class="creative-grid" id="creative-container">
-              <!-- Empty State Fallback -->
               <div class="empty-state card text-center p-8 flex flex-col items-center justify-center" style="grid-column: 1 / -1;">
-                <i data-lucide="palette" class="icon-lg text-tertiary mb-3" style="width:32px;height:32px;"></i>
                 <h4 class="text-md fw-semibold text-primary mb-1">No Creative Works Uploaded Yet</h4>
                 <p class="text-xs text-secondary">Digital sketches, traditional sketchbook scans, and design assets will be displayed here.</p>
               </div>
             </div>
           </div>
-
         </div>
-
       </section>
     </main>
 
-    <!-- Minimal Clean Footer (Email / Contact Link Only) -->
-    <footer class="footer-container py-6 border-t border-solid border-border mt-12 fade-in delay-5 text-center flex flex-col items-center gap-2 text-xs text-secondary" id="main-footer">
+    <footer class="footer-container py-6 fade-in delay-5 text-center flex flex-col items-center gap-2 text-xs text-secondary" id="main-footer">
+      <a href="mailto:zxhamdun2@gmail.com" class="footer-email">zxhamdun2@gmail.com</a>
       <p class="footer-copyright">&copy; 2026 Ibnu Hamdun. All rights reserved.</p>
-      <a href="mailto:zxhamdun2@gmail.com" class="text-tertiary hover:text-primary transition-colors font-mono">zxhamdun2@gmail.com</a>
     </footer>
-
   </div>
 
-  <!-- Hidden About Experience Modal / Bottom Sheet -->
   <div id="about-modal" class="about-modal modal-hidden" role="dialog" aria-modal="true" aria-labelledby="about-title">
     <div class="about-modal-overlay" id="about-overlay"></div>
     <div class="about-modal-container">
-      <button class="about-modal-close" id="about-close" aria-label="Close About Modal">&times;</button>
+      <button class="about-modal-close" id="about-close" aria-label="Close About Modal" type="button">&times;</button>
       <div class="about-modal-body">
         <div class="about-header flex items-center gap-4 mb-6">
-          <img src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile" class="about-avatar" width="64" height="64" decoding="async">
+          <img src="assets/images/profile/avatar.svg" alt="Ibnu Hamdun Profile" class="about-avatar" width="72" height="72" decoding="async">
           <div>
-            <h2 id="about-title" class="text-lg fw-bold text-primary mb-1">Ibnu Hamdun</h2>
-            <span class="text-xs text-tertiary">airseen1 &bull; ibnuwu</span>
+            <p class="about-kicker">MANCHESTER CITY / INFORMATION SYSTEMS</p>
+            <h2 id="about-title">Ibnu Hamdun</h2>
           </div>
         </div>
         <div class="about-bio text-sm text-secondary flex flex-col gap-4">
-          <p class="leading-relaxed text-secondary">
-            Information Systems student, Tech Enthusiast, and a massive Manchester City fan. Living at the intersection of technology and visual storytelling—spending my days diving into software architecture and my nights sketching, exploring history, or watching City play.
+          <p>
+            I am a creative technologist, information systems student, and a fiercely loyal Manchester City supporter. My work sits between software craft, visual storytelling, and disciplined creative process.
           </p>
-          <div class="daily-tools-section pt-3 border-t border-solid border-border">
-            <span class="text-xs fw-semibold text-tertiary uppercase tracking-wider block mb-2">Daily Tools</span>
-            <p class="text-xs text-secondary font-mono leading-relaxed">
+          <p>
+            I build with clarity, sketch with intent, and treat every screen like a composition. Whether I am coding interfaces, exploring design systems, or chasing the next matchday ritual, I move with the same energy: focused, loud, and precise.
+          </p>
+          <div class="daily-tools-section">
+            <span class="daily-tools-title">Daily Tools</span>
+            <p>
               Code Editor / Clip Studio Paint / Google Workspace / MS Office / Traditional Sketchbook
             </p>
           </div>

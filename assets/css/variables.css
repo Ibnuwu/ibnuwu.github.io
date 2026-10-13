@@ -1,91 +1,78 @@
 /* ==========================================================
    variables.css — Design Tokens for airseen1 Portfolio
-   Redesigned: Minimal Dark Creative + Purple Accent
+   Brutalist / Minimal / Sky Blue Edition
    ========================================================== */
 
 :root {
-  /* --- Brand Colors (Near-Black + Purple Accent) --- */
-  --bg-primary: #050505;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #0d0d0d;
-  --bg-elevated: #111111;
-  --bg-overlay: rgba(0, 0, 0, 0.88);
+  --bg-primary: #090c10;
+  --bg-secondary: #101416;
+  --bg-card: #0d0d0e;
+  --bg-elevated: #12171c;
+  --bg-overlay: rgba(6, 9, 12, 0.78);
 
-  --text-primary: #f0f0f0;
-  --text-secondary: #808080;
-  --text-tertiary: #555555;
+  --text-primary: #f4f5f6;
+  --text-secondary: #c0c4ca;
+  --text-tertiary: #8d97a2;
 
-  --border: #1a1a1a;
-  --border-hover: #2a2a2a;
-  --border-active: #3a3a3a;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-hover: rgba(108, 171, 221, 0.32);
 
-  /* --- Purple Accent System --- */
-  --accent: #9b6dff;
-  --accent-hover: #b08aff;
-  --accent-dim: #7c52e6;
-  --accent-subtle: rgba(155, 109, 255, 0.08);
-  --accent-glow: rgba(155, 109, 255, 0.15);
-  --accent-glow-hover: rgba(155, 109, 255, 0.25);
-  --accent-solid: #9b6dff;
-  --accent-solid-hover: #b08aff;
-  --accent-border: rgba(155, 109, 255, 0.2);
+  --sky: #6CABDD;
+  --sky-strong: #4d8ec5;
+  --sky-soft: rgba(108, 171, 221, 0.16);
+  --sky-soft-strong: rgba(108, 171, 221, 0.28);
 
-  /* --- Typography --- */
-  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --bg-grid: rgba(255, 255, 255, 0.03);
+  --shadow-brutal: 7px 7px 0 rgba(108, 171, 221, 0.22);
 
-  --fs-xs: 0.75rem;    /* 12px */
-  --fs-sm: 0.875rem;   /* 14px */
-  --fs-base: 1rem;     /* 16px */
-  --fs-md: 1.125rem;   /* 18px */
-  --fs-lg: 1.25rem;    /* 20px */
-  --fs-xl: 1.5rem;     /* 24px */
-  --fs-2xl: 2rem;      /* 32px */
-  --fs-3xl: 2.5rem;    /* 40px */
-  --fs-4xl: 3.5rem;    /* 56px */
+  --font-family: 'Inter', 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Arial Black', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --fs-xs: 0.72rem;
+  --fs-sm: 0.82rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.7rem;
+  --fs-3xl: 4.2rem;
+  --fs-4xl: 5.5rem;
 
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-black: 900;
 
-  --lh-tight: 1.15;
+  --lh-tight: 0.95;
   --lh-normal: 1.5;
   --lh-relaxed: 1.7;
 
-  /* --- Spacing --- */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.25rem;  /* 20px */
-  --space-6: 1.5rem;   /* 24px */
-  --space-8: 2rem;     /* 32px */
-  --space-10: 2.5rem;  /* 40px */
-  --space-12: 3rem;    /* 48px */
-  --space-16: 4rem;    /* 64px */
-  --space-20: 5rem;    /* 80px */
-  --space-24: 6rem;    /* 96px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
 
-  /* --- Border Radius --- */
   --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
   --radius-full: 9999px;
 
-  /* --- Shadows & Transitions --- */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-accent: 0 0 20px rgba(155, 109, 255, 0.06);
+  --transition-fast: 140ms ease;
+  --transition-normal: 220ms ease;
+  --transition-slow: 420ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* --- Layout --- */
-  --container-max: 680px;
-  --container-padding: var(--space-5);
+  --container-max: 1100px;
+  --container-padding: 1.25rem;
 }

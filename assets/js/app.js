@@ -778,6 +778,8 @@ function setupAboutModal() {
     document.body.style.overflow = '';
   };
 
+  if (aboutTrigger && aboutTrigger.dataset.bound === 'true') return;
+
   aboutTrigger?.addEventListener('click', openAboutModal);
   aboutClose?.addEventListener('click', closeAboutModal);
   aboutOverlay?.addEventListener('click', closeAboutModal);
@@ -787,6 +789,10 @@ function setupAboutModal() {
       closeAboutModal();
     }
   });
+
+  if (aboutTrigger) {
+    aboutTrigger.dataset.bound = 'true';
+  }
 }
 
 // --- Run Application ---
