@@ -112,8 +112,7 @@
 .hero-top-indicator {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: 4px 12px;
+  padding: 4px 14px;
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
@@ -122,15 +121,6 @@
   font-family: var(--font-mono);
   letter-spacing: 0.02em;
   margin-bottom: var(--space-5);
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: var(--radius-full);
-  background-color: var(--status-active);
-  box-shadow: 0 0 8px var(--status-active-glow);
-  display: inline-block;
 }
 
 .hero-profile-row {
@@ -159,25 +149,24 @@
   border-color: var(--accent-border);
 }
 
-/* Mini mascot canvas integrated nicely */
+/* Mascot canvas — slightly larger, border: none */
 .hero-mascot-container {
   margin-left: auto;
   position: relative;
-  width: 54px;
-  height: 54px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 2px;
+  background: transparent;
+  border: none;
+  padding: 0;
   flex-shrink: 0;
 }
 
 .skull-canvas {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   display: block;

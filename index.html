@@ -82,7 +82,6 @@
       <section class="bento-card hero-card" id="hero-profile-card">
         <!-- Top Indicator -->
         <div class="hero-top-indicator">
-          <span class="status-dot" aria-hidden="true"></span>
           <span>@ibnuwu &bull; airseen1</span>
         </div>
 
@@ -108,7 +107,7 @@
 
           <!-- Interactive Pixel Skull Mascot Companion -->
           <div class="hero-mascot-container" id="skull-container" title="Pixel Mascot" aria-hidden="true">
-            <canvas id="skull-canvas" class="skull-canvas" width="48" height="48"></canvas>
+            <canvas id="skull-canvas" class="skull-canvas" width="72" height="72"></canvas>
           </div>
         </div>
 
@@ -322,9 +321,9 @@
             </div>
           </article>
 
-          <!-- PROJECT 3 (STARRED REPO): Reminv -->
-          <article class="bento-card project-bento-card" data-project="reminv">
-            <!-- Visual Preview Box: Placeholder task/dashboard interface mockup box -->
+          <!-- PROJECT 3 (STARRED REPO): Fernche -->
+          <article class="bento-card project-bento-card" data-project="fernche">
+            <!-- Visual Preview Box: Placeholder mobile dashboard/ledger UI preview box -->
             <div class="project-preview-box">
               <div class="preview-window-bar">
                 <span class="window-dot"></span>
@@ -333,30 +332,33 @@
               </div>
               <div class="preview-inner-canvas">
                 <svg class="preview-mockup-svg" viewBox="0 0 280 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <!-- Dashboard Window Frame -->
-                  <rect x="25" y="16" width="230" height="108" rx="8" fill="#121215" stroke="#27272a" stroke-width="1.2"/>
+                  <!-- Mobile Device Frame Mockup -->
+                  <rect x="70" y="8" width="140" height="124" rx="14" fill="#121215" stroke="#27272a" stroke-width="1.2"/>
+                  <!-- Speaker notch -->
+                  <rect x="125" y="14" width="30" height="3" rx="1.5" fill="#3f3f46"/>
                   
-                  <!-- Column 1: Task List Column -->
-                  <rect x="38" y="32" width="94" height="78" rx="6" fill="#18181b" stroke="#27272a"/>
-                  <rect x="46" y="42" width="48" height="5" rx="2.5" fill="#a1a1aa"/>
-                  <!-- Task Card Item 1 -->
-                  <rect x="46" y="54" width="78" height="20" rx="4" fill="#202024" stroke="#3f3f46" stroke-width="0.8"/>
-                  <circle cx="56" cy="64" r="3" fill="#10b981"/>
-                  <rect x="65" y="62" width="45" height="4" rx="2" fill="#71717a"/>
-                  <!-- Task Card Item 2 -->
-                  <rect x="46" y="80" width="78" height="20" rx="4" fill="#202024" stroke="#3f3f46" stroke-width="0.8"/>
-                  <circle cx="56" cy="90" r="3" fill="#9b6dff"/>
-                  <rect x="65" y="88" width="38" height="4" rx="2" fill="#71717a"/>
+                  <!-- Top Balance & Financial Ledger Card -->
+                  <rect x="80" y="24" width="120" height="36" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+                  <rect x="88" y="30" width="40" height="4" rx="2" fill="#71717a"/>
+                  <rect x="88" y="38" width="58" height="8" rx="4" fill="#9b6dff"/>
+                  <circle cx="188" cy="42" r="4" fill="#10b981"/>
 
-                  <!-- Column 2: Workflow Metrics & Progress -->
-                  <rect x="146" y="32" width="94" height="78" rx="6" fill="#18181b" stroke="#27272a"/>
-                  <rect x="156" y="42" width="55" height="5" rx="2.5" fill="#a1a1aa"/>
-                  <!-- Progress Bar Mockup -->
-                  <rect x="156" y="58" width="74" height="8" rx="4" fill="#27272a"/>
-                  <rect x="156" y="58" width="52" height="8" rx="4" fill="#9b6dff"/>
-                  <!-- Metric summary -->
-                  <rect x="156" y="76" width="32" height="18" rx="4" fill="#202024"/>
-                  <rect x="194" y="76" width="36" height="18" rx="4" fill="#202024"/>
+                  <!-- fl_chart Visual Spline Graph Line -->
+                  <path d="M84 78 Q 110 64, 135 72 T 185 62 T 196 66" stroke="#9b6dff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                  <path d="M84 78 Q 110 64, 135 72 T 185 62 T 196 66 L 196 84 L 84 84 Z" fill="rgba(155, 109, 255, 0.08)"/>
+
+                  <!-- Transaction Ledger Rows -->
+                  <!-- Ledger Item 1 -->
+                  <rect x="80" y="88" width="120" height="18" rx="5" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
+                  <circle cx="90" cy="97" r="3" fill="#10b981"/>
+                  <rect x="98" y="95" width="46" height="4" rx="2" fill="#a1a1aa"/>
+                  <rect x="168" y="95" width="24" height="4" rx="2" fill="#10b981"/>
+
+                  <!-- Ledger Item 2 -->
+                  <rect x="80" y="110" width="120" height="18" rx="5" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
+                  <circle cx="90" cy="119" r="3" fill="#9b6dff"/>
+                  <rect x="98" y="117" width="52" height="4" rx="2" fill="#71717a"/>
+                  <rect x="172" y="117" width="20" height="4" rx="2" fill="#a1a1aa"/>
                 </svg>
               </div>
             </div>
@@ -364,24 +366,26 @@
             <!-- Project Meta & Title -->
             <div class="project-card-meta">
               <span class="project-badge-tag badge-starred">Starred Repo</span>
-              <span class="text-xs text-tertiary font-mono">Workflow &amp; Productivity</span>
+              <span class="text-xs text-tertiary font-mono">Mobile Finance App</span>
             </div>
 
-            <h3 class="project-title">Reminv</h3>
+            <h3 class="project-title">Fernche</h3>
             <p class="project-desc">
-              Task and idea management web application focusing on lightweight workflow organization.
+              Offline-first personal finance mobile app featuring transaction ledgers, budget tracking, data visualization, notes repository, and Android widgets.
             </p>
 
             <!-- Badges -->
             <div class="tech-badges-list">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Flask</span>
-              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Dart</span>
+              <span class="tech-badge">SQLite</span>
+              <span class="tech-badge">Provider</span>
+              <span class="tech-badge">fl_chart</span>
             </div>
 
             <!-- Buttons -->
             <div class="project-actions">
-              <a href="https://github.com/Ibnuwu/reminv" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="GitHub Repository for Reminv">
+              <a href="https://github.com/Ibnuwu/fernche" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="GitHub Repository for Fernche">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
@@ -482,6 +486,7 @@
           <span class="tool-item-badge">MS Office</span>
           <span class="tool-item-badge">Traditional Sketchbook</span>
           <span class="tool-item-badge">Web Dev (HTML5, CSS3, JS, Decap CMS)</span>
+          <span class="tool-item-badge">Mobile Dev (Flutter, Dart, SQLite)</span>
         </div>
       </div>
     </div>

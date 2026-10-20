@@ -39,6 +39,16 @@
     height: 72px;
   }
 
+  .hero-mascot-container {
+    width: 58px;
+    height: 58px;
+  }
+
+  .skull-canvas {
+    width: 58px;
+    height: 58px;
+  }
+
   .hero-name {
     font-size: var(--fs-xl);
   }
